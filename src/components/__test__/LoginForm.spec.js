@@ -6,4 +6,10 @@ describe('LoginForm.vue', () => {
     const wrapper = shallowMount(LoginForm);
     expect(wrapper.vm.username).toBe('');
   });
+
+  test('ID는 이메일 형식이어야 한다.', () => {
+    const wrapper = shallowMount(LoginForm);
+    const idInput = wrapper.find('#username');
+    console.log(idInput.html());
+  });
 });
