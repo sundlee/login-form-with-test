@@ -7,15 +7,16 @@ describe('LoginForm.vue', () => {
     expect(wrapper.vm.username).toBe('');
   });
 
-  test('ID는 이메일 형식이어야 한다.', () => {
+  test('ID가 이메일 형식이 아니면 경고 메세지가 출력된다.', () => {
     const wrapper = shallowMount(LoginForm, {
       data() {
         return {
-          username: 'test',
+          username: 'test', // 이메일을 입력해야 isUsernameValid가 true가 됨
         };
       },
     });
-    const idInput = wrapper.find('#username');
-    console.log(idInput.element.value);
+    const warningText = wrapper.find('.warning');
+    console.log(warningText.html());
+    expect(warningText.exists()).toBeTruthy();
   });
 });
