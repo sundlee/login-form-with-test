@@ -1,29 +1,3 @@
 # login-form-with-test
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Vue로 생성한 로그인 페이지를 테스트하는 예제 vue-cli로 프로젝트 생성시 unit test를 jest로 선택해서 생성한다. 
